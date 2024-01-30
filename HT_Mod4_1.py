@@ -27,6 +27,6 @@ path = Path("salary_file.txt")
 try: # перевіряємо на наявність файлу
     total_salary(path)
 except Exception as error: 
-    print(f"Зчитування файлу неможливе: {error}")
+    print(f"Файл з таким ім'ям відсутній: {error}")
 
 
