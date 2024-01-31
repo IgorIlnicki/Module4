@@ -5,14 +5,14 @@ def get_cats_info(path):
     with open(path, 'r', encoding="utf-8") as files:
         Dic_keys = ["id", "name", "age"]
         fh =str(files.read()) # перетворюємо текст в рядок
-        print(type(fh))
+        # print(type(fh))
         try:  # перевіряємо
             p1 = r"[\w\+\n]+" 
             fh1 = ','.join(re.findall(p1,fh)) 
-            print(f" fh1 = {fh1}")
+            # print(f" fh1 = {fh1}")
             fh2 = fh1.split() # розділяємо рядок на елементи
-            print(f" fh2 = {fh2}") 
-            print(len(fh2))
+            # print(f" fh2 = {fh2}") 
+            # print(len(fh2))
 
             for i in fh2:
                 # print(f"{i}")
