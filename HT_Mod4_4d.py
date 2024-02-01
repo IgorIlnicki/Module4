@@ -6,9 +6,13 @@ def parse_input(user_input):
 def add_contact(args, contacts):
     name, phone = args
     contacts[name] = phone
-    print(f"Tel: {contacts}")
+   
     return print(f"Contact {name} added: {phone}") 
     
+def show_phone(args, contacts):
+    name  = args
+    phone = contacts[name]
+    return print(f"Contact {name}: {phone}")
 
 def main():
     contacts = {}  #  словник з іменем і номером телефону
@@ -16,14 +20,21 @@ def main():
     while True:
         user_input = input("Enter a command: ")
         command, *args = parse_input(user_input)
-
+        print(len(user_input))
         if command in ["close", "exit"]:
             print("Good bye!")
             break
         elif command == "hello":
             print("How can I help you?")
+
         elif command == "add":
             print(add_contact(args, contacts))
+            print(len(contacts))
+            print(f"Tel: {contacts}")
+
+        elif command == "phone":
+            print(show_phone(args, contacts))
+
         else:
             print("Invalid command.")
 
