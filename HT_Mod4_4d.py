@@ -6,7 +6,7 @@ def parse_input(user_input):
 def add_contact(args, contacts):
     name, phone = args
     contacts[name] = phone
-    return "Contact added."
+    return print(f"Contact {name} added: {phone}") 
 
 def main():
     contacts = {}  #  словник з іменем і номером телефону
