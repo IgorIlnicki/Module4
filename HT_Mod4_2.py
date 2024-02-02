@@ -29,7 +29,9 @@ def get_cats_info(path):
         except Exception as error:  # якщ
             print(f"Зчитування файлу неможливе: {error}")
 
+
 path = Path("Cats_text.txt")
+
 try: # перевіряємо на наявність файлу
     get_cats_info(path)
 except Exception as error: 
